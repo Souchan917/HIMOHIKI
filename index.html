@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>謎解き屋台 - ヒントサイト</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #3498db;
+            --text-color: #2c3e50;
+            --background-color: #f5f6fa;
+            --section-background: #ffffff;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+
+        .puzzle-section {
+            background: var(--section-background);
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .puzzle-button {
+            width: 100%;
+            padding: 15px 20px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            text-align: left;
+            cursor: pointer;
+            font-size: 1.1em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+
+        .puzzle-button:hover {
+            background: var(--secondary-color);
+        }
+
+        .puzzle-button::after {
+            content: '+';
+            font-size: 1.5em;
+            margin-left: 10px;
+        }
+
+        .puzzle-button.active::after {
+            content: '-';
+        }
+
+        .puzzle-content {
+            display: none;
+            padding: 20px;
+        }
+
+        .hint-text {
+            margin-bottom: 20px;
+        }
+
+        .answer-button {
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: opacity 0.3s;
+        }
+
+        .answer-button:hover {
+            opacity: 0.9;
+        }
+
+        .answer-content {
+            display: none;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>謎解き屋台</h1>
+            <p>ヒントと解答をご案内します</p>
+        </header>
+
+        <div class="puzzle-section">
+            <button class="puzzle-button">Q1</button>
+            <div class="puzzle-content">
+                <div class="hint-text">
+                    【ヒント】<br>
+                    ・文字の形に注目してみましょう<br>
+                    ・似ている形の文字を探してみましょう
+                </div>
+                <button class="answer-button">正解を見る</button>
+                <div class="answer-content">
+                    【解答】<br>
+                    XXXXXX（※実際の解答を入れてください）
+                </div>
+            </div>
+        </div>
+
+        <div class="puzzle-section">
+            <button class="puzzle-button">Q2</button>
+            <div class="puzzle-content">
+                <div class="hint-text">
+                    【ヒント】<br>
+                    ・数字の並びに規則性はありませんか？<br>
+                    ・順番を変えてみると…？
+                </div>
+                <button class="answer-button">正解を見る</button>
+                <div class="answer-content">
+                    【解答】<br>
+                    XXXXXX（※実際の解答を入れてください）
+                </div>
+            </div>
+        </div>
+
+        <div class="puzzle-section">
+            <button class="puzzle-button">Q3</button>
+            <div class="puzzle-content">
+                <div class="hint-text">
+                    【ヒント】<br>
+                    ・色の組み合わせに注目してみましょう<br>
+                    ・パターンを見つけることができますか？
+                </div>
+                <button class="answer-button">正解を見る</button>
+                <div class="answer-content">
+                    【解答】<br>
+                    XXXXXX（※実際の解答を入れてください）
+                </div>
+            </div>
+        </div>
+
+        <div class="puzzle-section">
+            <button class="puzzle-button">Q4</button>
+            <div class="puzzle-content">
+                <div class="hint-text">
+                    【ヒント】<br>
+                    ・表と裏の関係性を考えてみましょう<br>
+                    ・見方を変えると新しい発見があるかもしれません
+                </div>
+                <button class="answer-button">正解を見る</button>
+                <div class="answer-content">
+                    【解答】<br>
+                    XXXXXX（※実際の解答を入れてください）
+                </div>
+            </div>
+        </div>
+
+        <div class="puzzle-section">
+            <button class="puzzle-button">Q5</button>
+            <div class="puzzle-content">
+                <div class="hint-text">
+                    【ヒント】<br>
+                    ・これまでの解答に共通点はありませんか？<br>
+                    ・全体を通して見てみましょう
+                </div>
+                <button class="answer-button">正解を見る</button>
+                <div class="answer-content">
+                    【解答】<br>
+                    XXXXXX（※実際の解答を入れてください）
+                </div>
+            </div>
+        </div>
+
+        <div class="puzzle-section">
+            <button class="puzzle-button">謎を全て解いたがその先がわからない</button>
+            <div class="puzzle-content">
+                <div class="hint-text">
+                    【ヒント】<br>
+                    ・全ての解答を組み合わせてみましょう<br>
+                    ・新しい意味が見えてくるかもしれません
+                </div>
+                <button class="answer-button">正解を見る</button>
+                <div class="answer-content">
+                    【解答】<br>
+                    XXXXXX（※実際の解答を入れてください）
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.puzzle-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const isExpanded = content.style.display === 'block';
+                
+                button.classList.toggle('active');
+                content.style.display = isExpanded ? 'none' : 'block';
+            });
+        });
+
+        document.querySelectorAll('.answer-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const answerContent = button.nextElementSibling;
+                const isExpanded = answerContent.style.display === 'block';
+                
+                answerContent.style.display = isExpanded ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+</html>
