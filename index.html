@@ -68,7 +68,7 @@
         }
 
         .puzzle-button::after {
-            content: '+';
+            content: '+'; 
             font-size: 1.5em;
             margin-left: 10px;
         }
@@ -86,7 +86,7 @@
             margin-bottom: 20px;
         }
 
-        .answer-button {
+        .answer-button, .hint-button {
             background: var(--accent-color);
             color: white;
             border: none;
@@ -95,9 +95,10 @@
             cursor: pointer;
             font-size: 1em;
             transition: opacity 0.3s;
+            margin-top: 10px;
         }
 
-        .answer-button:hover {
+        .answer-button:hover, .hint-button:hover {
             opacity: 0.9;
         }
 
@@ -106,6 +107,11 @@
             margin-top: 20px;
             padding-top: 20px;
             border-top: 1px solid #eee;
+        }
+
+        .additional-hint {
+            display: none;
+            margin-top: 10px;
         }
 
         @media (max-width: 600px) {
@@ -131,100 +137,163 @@
         </header>
 
         <div class="puzzle-section">
-            <button class="puzzle-button">Q1</button>
+            <button class="puzzle-button">屋台の景品一覧から得られる情報</button>
             <div class="puzzle-content">
                 <div class="hint-text">
                     【ヒント】<br>
-                    ・文字の形に注目してみましょう<br>
-                    ・似ている形の文字を探してみましょう
+                    一部分が黒く塗りつぶされているため、大当たりの紐はわかりません。<br>
+                    しかし、他の札と景品でルートがわかるものが２つわかります。
                 </div>
                 <button class="answer-button">正解を見る</button>
                 <div class="answer-content">
                     【解答】<br>
-                    XXXXXX（※実際の解答を入れてください）
+                    4番と8番の紐は、大当たりにはつながっていないことがわかります。
                 </div>
             </div>
         </div>
 
+    <!-- Q1 -->
+    <div class="puzzle-section">
+        <button class="puzzle-button">Q1</button>
+        <div class="puzzle-content">
+            <div class="hint-text">
+                【ヒント1】<br>
+                ・イラストは矢印を通過すると、ある法則で変化するようです。<br>
+                ・問題上部にある3つのイラストはそれぞれ、「日」「月」「火」を表しています。
+            </div>
+            <button class="hint-button">次のヒントを見る</button>
+            <div class="additional-hint">
+                【ヒント2】<br>
+                ・イラストの変化する法則は「一週間」を表しています。<br>
+                ・「木」と「水」を次の日に変化させると、二字熟語になります。
+            </div>
+            <button class="answer-button" style="display: none;">正解を見る</button>
+            <div class="answer-content">
+                【解答】<br>
+                鉄板（てっぱん）
+            </div>
+        </div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="puzzle-section">
+        <button class="puzzle-button">Q2</button>
+        <div class="puzzle-content">
+            <div class="hint-text">
+                【ヒント1】<br>
+                ・手元の紙にあるQ2の手がかりには3つのイラストが書かれています。<br>
+                ・3つのイラストは「ナイト」「タヌキ」「コケシ」を表しています。
+            </div>
+            <button class="hint-button">次のヒントを見る</button>
+            <div class="additional-hint">
+                【ヒント2】<br>
+                ・例えば「タヌキ」は「タ」を「抜く」と捉えることができます。
+                ・それぞれ「イタチグコラトム」から文字を消しましょう。
+            </div>
+            <button class="answer-button" style="display: none;">正解を見る</button>
+            <div class="answer-content">
+                【解答】<br>
+                イチグラム（1g）
+            </div>
+        </div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="puzzle-section">
+        <button class="puzzle-button">Q3</button>
+        <div class="puzzle-content">
+            <div class="hint-text">
+                【ヒント1】<br>
+                ・問題にある図形を2つの方法で言い換えましょう。
+            </div>
+            <button class="hint-button">次のヒントを見る</button>
+            <div class="additional-hint">
+                【ヒント2】<br>
+                ・片方は「日本語」で「丸」と表すことができます。
+            </div>
+            <button class="answer-button" style="display: none;">正解を見る</button>
+            <div class="answer-content">
+                【解答】<br>
+                三万円（さんまんえん）
+            </div>
+        </div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="puzzle-section">
+        <button class="puzzle-button">Q4</button>
+        <div class="puzzle-content">
+            <div class="hint-text">
+                【ヒント1】<br>
+                ・鹿のイラストを手がかりに、手元に書かれた紙にあるイラストを残りの空白に当てはめましょう。<br>
+                ・三つのイラストは「箸（ハシ）」「針（ハリ）」「理科（リカ）」を表しています。
+            </div>
+            <button class="hint-button">次のヒントを見る</button>
+            <div class="additional-hint">
+                【ヒント2】<br>
+                ・1番右の空欄には「箸（ハシ）」イラストが入ります。
+            </div>
+            <button class="answer-button" style="display: none;">正解を見る</button>
+            <div class="answer-content">
+                【解答】<br>
+                ハカリ
+            </div>
+        </div>
+    </div>
+
+    <!-- 集まった情報を確認する -->
+    <div class="puzzle-section">
+        <button class="puzzle-button">集まった情報を確認する</button>
+        <div class="puzzle-content">
+            <div class="hint-text">
+                【情報】<br>
+                ・景品情報によると、大当たりがどの紐につながっているかわからないが、少なくとも「4番」と「8番」の紐ではない<br>
+                ・紐引きでは当たりのひもの札に「鉄板」が入っているため、だけ他のひもの札よりも「イチグラム」重い<br>
+                ・「三万円」を支払えば、店主が「ハカリ」を貸してくれるらしいが、それは壊れていて使えない
+            </div>
+            <!-- <button class="answer-button">正解を見る</button>
+            <div class="answer-content">
+                【解答】<br>
+                XXXXXX（※実際の解答を入れてください）
+            </div> -->
+        </div>
+    </div>
+        <!-- その後がわからない -->
         <div class="puzzle-section">
-            <button class="puzzle-button">Q2</button>
+            <button class="puzzle-button">その後がわからない</button>
             <div class="puzzle-content">
                 <div class="hint-text">
-                    【ヒント】<br>
-                    ・数字の並びに規則性はありませんか？<br>
-                    ・順番を変えてみると…？
+                    【ヒント1】<br>
+                    ・大当たりのひもの札には鉄板が入っていて、重さを量れば正解の札を見つけることができそうです。<br>
+                    ・しかし、店主が持っているハカリは壊れているためどうやっても重さを計測して見分けることはできません。<br>
+                    ・別の方法で大当たりの紐を見つけることはできないでしょうか。
                 </div>
-                <button class="answer-button">正解を見る</button>
+                <button class="hint-button">次のヒントを見る</button>
+                <div class="additional-hint">
+                    【ヒント2】<br>
+                    ・当たりの札には鉄板が入っていますが、「重さが異なっている」以外にも別の方法で見つけることができます<br>
+                    ・「鉄」の性質について考えてみましょう
+        
+                </div>
+                <button class="hint-button" style="display: none;">次のヒントを見る</button>
+                <div class="additional-hint">
+                    【ヒント3】<br>
+                    ・鉄板は磁石にくっつくという特性があります。<br>
+                    ・磁石があれば大当たりの札を見極めることができそうです。<br>
+                    ・磁石を手に入れられるような景品がありました。
+        
+                </div>
+                <button class="answer-button" style="display: none;">最後のヒントを見る</button>
                 <div class="answer-content">
-                    【解答】<br>
-                    XXXXXX（※実際の解答を入れてください）
+                    【ヒントラスト】<br>
+                    ・磁石は景品の中の「磁力お守り」に入っているようです。<br>
+                    ・この「磁力お守り」を最初に引くことができれば、残り一回の紐引きで「大当たりの札」を見極めることができます。<br>
+                    ・紐引きの屋台に向かい、実際に行動してみましょう！
+
                 </div>
             </div>
         </div>
 
-        <div class="puzzle-section">
-            <button class="puzzle-button">Q3</button>
-            <div class="puzzle-content">
-                <div class="hint-text">
-                    【ヒント】<br>
-                    ・色の組み合わせに注目してみましょう<br>
-                    ・パターンを見つけることができますか？
-                </div>
-                <button class="answer-button">正解を見る</button>
-                <div class="answer-content">
-                    【解答】<br>
-                    XXXXXX（※実際の解答を入れてください）
-                </div>
-            </div>
-        </div>
-
-        <div class="puzzle-section">
-            <button class="puzzle-button">Q4</button>
-            <div class="puzzle-content">
-                <div class="hint-text">
-                    【ヒント】<br>
-                    ・表と裏の関係性を考えてみましょう<br>
-                    ・見方を変えると新しい発見があるかもしれません
-                </div>
-                <button class="answer-button">正解を見る</button>
-                <div class="answer-content">
-                    【解答】<br>
-                    XXXXXX（※実際の解答を入れてください）
-                </div>
-            </div>
-        </div>
-
-        <div class="puzzle-section">
-            <button class="puzzle-button">Q5</button>
-            <div class="puzzle-content">
-                <div class="hint-text">
-                    【ヒント】<br>
-                    ・これまでの解答に共通点はありませんか？<br>
-                    ・全体を通して見てみましょう
-                </div>
-                <button class="answer-button">正解を見る</button>
-                <div class="answer-content">
-                    【解答】<br>
-                    XXXXXX（※実際の解答を入れてください）
-                </div>
-            </div>
-        </div>
-
-        <div class="puzzle-section">
-            <button class="puzzle-button">謎を全て解いたがその先がわからない</button>
-            <div class="puzzle-content">
-                <div class="hint-text">
-                    【ヒント】<br>
-                    ・全ての解答を組み合わせてみましょう<br>
-                    ・新しい意味が見えてくるかもしれません
-                </div>
-                <button class="answer-button">正解を見る</button>
-                <div class="answer-content">
-                    【解答】<br>
-                    XXXXXX（※実際の解答を入れてください）
-                </div>
-            </div>
-        </div>
     </div>
 
     <script>
@@ -235,6 +304,28 @@
                 
                 button.classList.toggle('active');
                 content.style.display = isExpanded ? 'none' : 'block';
+            });
+        });
+
+        document.querySelectorAll('.hint-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const additionalHint = button.nextElementSibling;
+                const isExpanded = additionalHint.style.display === 'block';
+                
+                additionalHint.style.display = isExpanded ? 'none' : 'block';
+
+                // 次のボタンを表示
+                if (!isExpanded) {
+                    const nextHintButton = button.nextElementSibling.nextElementSibling;
+                    if (nextHintButton) {
+                        nextHintButton.style.display = 'inline-block';
+                    }
+                    // ヒント3が表示されたら「正解を見る」ボタンを表示
+                    if (!nextHintButton) {
+                        const answerButton = button.nextElementSibling.nextElementSibling;
+                        answerButton.style.display = 'inline-block';
+                    }
+                }
             });
         });
 
